@@ -3,6 +3,6 @@ code for displaying periodic text (time, weather, etc.) on a PiMoroni Scroll Pha
 
 Requires that the PiMoroni library be installed.
 
-Run this script and the time will be spelled out on the LEDs in words ("eleven o'clock", etc.)
+Run this script and the time will be spelled out on the LEDs in words ("eleven o'clock", etc.), alternating with weather forecasts.
 
 http://www.wheels.org/pix/phatClock.gif
