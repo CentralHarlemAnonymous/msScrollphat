@@ -38,7 +38,7 @@ def run():
             text = msClock.paddedTime()
             counter = counter + 1
         elif counter == 4:
-            text = msForecast.forecasts(1)
+            text = msForecast.oneForecast()
             counter = 1
         text = "    " + text
         textWidth=scrollphathd.write_string(text, x=0, y=0, font=font5x7, brightness=float(args.b))
