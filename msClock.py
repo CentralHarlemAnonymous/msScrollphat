@@ -82,3 +82,10 @@ def paddedTime():
         else:
             ans = numName(hour % 12)+" "+numName(minute)
         return ans
+
+def printTime():
+    print paddedTime()
+
+
+if __name__ == "__main__":
+    printTime()
