@@ -5,7 +5,7 @@ import scrollphathd
 import argparse
 import time
 import msClock
-import msForecast
+import msWeather
 from scrollphathd.fonts import font5x7
 
 print("""
@@ -38,7 +38,7 @@ def run():
             text = msClock.paddedTime()
             counter = counter + 1
         elif counter == 4:
-            text = msForecast.oneForecast()
+            text = msWeather.currentReport()
             counter = 1
         text = "    " + text
         textWidth=scrollphathd.write_string(text, x=0, y=0, font=font5x7, brightness=float(args.b))
