@@ -4,7 +4,7 @@
 import pyowm
 import json
 
-owm = pyowm.OWM('8473ffbb38cc053f91ecb29ae8ff9bf5')  # You MUST provide a valid API key
+owm = pyowm.OWM('XXXXXXXXXXXXXXXXXX')  # You MUST provide a valid API key
 
 def forecasts(num):
     forecaster = owm.three_hours_forecast('Dobbs Ferry, US')
