@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import pyowm
 import json
 
-owm = pyowm.OWM('XXXXXXXXXXXXX')  # You MUST provide a valid API key
+owm = pyowm.OWM('8473ffbb38cc053f91ecb29ae8ff9bf5')  # You MUST provide a valid API key
 
 def forecasts(num):
     forecaster = owm.three_hours_forecast('Dobbs Ferry, US')
@@ -21,9 +23,9 @@ def currentReport():
     currentJSON = json.loads(currentW.to_JSON())
     status = currentJSON['detailed_status']
     tempA = currentW.get_temperature('fahrenheit')
-    tempS = str(tempA['temp']) + 'F'
+    tempS = str(round(tempA['temp'],1)) + u'°F'
     ans = status + "  " + tempS
-    return ans
+    return {u'sunrise_time': currentJSON[u'sunrise_time'], u'sunset_time': currentJSON[u'sunset_time'], 'status': ans}
 
 def oneForecast():
     mrForecast = forecasts(1)
